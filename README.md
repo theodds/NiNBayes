@@ -6,8 +6,10 @@ The purpose of this package is to implemetn *N*on-*i*gnorable *N*onparametric *B
 
 ## Installation
 
+```
 library(devtools)
 install_github("theodds/NiNBayes")
+```
 
 ## Using the package
 
