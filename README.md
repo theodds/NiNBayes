@@ -43,11 +43,11 @@ fake_data <- make_fake_data()
 Next, we fit the MNAR PARAFAC working model, and an MAR equivalent which does not model the missingness. This may take a moment to complete. The parameter `sigma_a` is a tuning parameter which I set to roughly equal to the number of clusters the PARAFAC model finds in the data (as measured by `rowSums(fit$class_counts > 0)`).
 
 ``` r
-fit_mnar <- ParafacMNAR(Y = fake_data$Y, R = fake_data$R, sigma_a = 8)
-fit_mar <- ParafacMAR(Y = fake_data$Y, R = fake_data$R, sigma_a = 8)
+fit_mnar <- ParafacMNAR(Y = fake_data$Y, R = fake_data$R, sigma_a = 8, nburn = 1000, nsave = 1000, nthin = 1)
+fit_mar <- ParafacMAR(Y = fake_data$Y, R = fake_data$R, sigma_a = 8, nburn = 1000, nsave = 1000, nthin = 1)
 ```
 
-The output of these commands is the result of running a Markov chain. The easiest way to make use of the fits is to use multiple imputation.
+The output of these commands is the result of running a Markov chain. The chains above are somewhat short, and users may want to run longer chains in practice. The easiest way to make use of the fits is to use multiple imputation.
 
 ``` r
 imputes_ccmv <- ParafacMI(Y = fake_data$Y, R = fake_data$R, chain = fit_mnar, 
