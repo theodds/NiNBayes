@@ -1,3 +1,9 @@
+# Rstudio stuff
+*.Rproj
+*.Rhistory
+*.Rbuildignore
+Scratch.R
+
 # Prerequisites
 *.d
 
@@ -30,3 +36,4 @@
 *.exe
 *.out
 *.app
+.Rproj.user

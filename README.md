@@ -14,3 +14,6 @@ install_github("theodds/NiNBayes")
 ## Using the package
 
 This package is currently in a very preliminary status. Right now, the package allows for analyzing simple multivariate binary data, though there are plans in the future to (1) allow for the inclusion of covariates and (2) allow for continuous responses. 
+
+### Fitting the model
+
