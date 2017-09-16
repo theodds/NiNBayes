@@ -29,4 +29,3 @@ Returns a data frame contaning
 \description{
 Conducts G-computation under the observed data missing value assumption
 }
-

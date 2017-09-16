@@ -18,4 +18,3 @@ the sample of the marginal mean at iteration i and time j.
 \description{
 Computes the marginal mean for each time point, under the MAR assumption.
 }
-

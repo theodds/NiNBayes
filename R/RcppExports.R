@@ -2,66 +2,66 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 CCMVMI <- function(Y, R, omega, log_omega, gamma, log_gamma, log_1_m_gamma, beta, log_beta, log_1_m_beta) {
-    .Call('_MissingParafac_CCMVMI', PACKAGE = 'MissingParafac', Y, R, omega, log_omega, gamma, log_gamma, log_1_m_gamma, beta, log_beta, log_1_m_beta)
+    .Call('_NiNBayes_CCMVMI', PACKAGE = 'NiNBayes', Y, R, omega, log_omega, gamma, log_gamma, log_1_m_gamma, beta, log_beta, log_1_m_beta)
 }
 
 CCMVGcomp <- function(N_sim, J, j_0, omega, log_omega, gamma, log_gamma, log_1_m_gamma, beta, log_beta, log_1_m_beta, xi) {
-    .Call('_MissingParafac_CCMVGcomp', PACKAGE = 'MissingParafac', N_sim, J, j_0, omega, log_omega, gamma, log_gamma, log_1_m_gamma, beta, log_beta, log_1_m_beta, xi)
+    .Call('_NiNBayes_CCMVGcomp', PACKAGE = 'NiNBayes', N_sim, J, j_0, omega, log_omega, gamma, log_gamma, log_1_m_gamma, beta, log_beta, log_1_m_beta, xi)
 }
 
 MARMI <- function(Y, R, omega, log_omega, beta, log_beta, log_1_m_beta) {
-    .Call('_MissingParafac_MARMI', PACKAGE = 'MissingParafac', Y, R, omega, log_omega, beta, log_beta, log_1_m_beta)
+    .Call('_NiNBayes_MARMI', PACKAGE = 'NiNBayes', Y, R, omega, log_omega, beta, log_beta, log_1_m_beta)
 }
 
 LogSumExp <- function(x) {
-    .Call('_MissingParafac_LogSumExp', PACKAGE = 'MissingParafac', x)
+    .Call('_NiNBayes_LogSumExp', PACKAGE = 'NiNBayes', x)
 }
 
 NIPMI <- function(Y, R, omega, log_omega, gamma, log_gamma, log_1_m_gamma, beta, log_beta, log_1_m_beta, j_0) {
-    .Call('_MissingParafac_NIPMI', PACKAGE = 'MissingParafac', Y, R, omega, log_omega, gamma, log_gamma, log_1_m_gamma, beta, log_beta, log_1_m_beta, j_0)
+    .Call('_NiNBayes_NIPMI', PACKAGE = 'NiNBayes', Y, R, omega, log_omega, gamma, log_gamma, log_1_m_gamma, beta, log_beta, log_1_m_beta, j_0)
 }
 
 ParafacGcomp <- function(N_sim, J, j_0, omega, log_omega, gamma, log_gamma, log_1_m_gamma, beta, log_beta, log_1_m_beta, xi) {
-    .Call('_MissingParafac_ParafacGcomp', PACKAGE = 'MissingParafac', N_sim, J, j_0, omega, log_omega, gamma, log_gamma, log_1_m_gamma, beta, log_beta, log_1_m_beta, xi)
+    .Call('_NiNBayes_ParafacGcomp', PACKAGE = 'NiNBayes', N_sim, J, j_0, omega, log_omega, gamma, log_gamma, log_1_m_gamma, beta, log_beta, log_1_m_beta, xi)
 }
 
 UpdateClassMARCpp <- function(Y, R, log_beta, log_1_m_beta, log_omega) {
-    .Call('_MissingParafac_UpdateClassMARCpp', PACKAGE = 'MissingParafac', Y, R, log_beta, log_1_m_beta, log_omega)
-}
-
-TLOMI <- function(Y, R, omega, log_omega, gamma, log_gamma, log_1_m_gamma, beta, log_beta, log_1_m_beta, xi, j_0) {
-    .Call('_MissingParafac_TLOMI', PACKAGE = 'MissingParafac', Y, R, omega, log_omega, gamma, log_gamma, log_1_m_gamma, beta, log_beta, log_1_m_beta, xi, j_0)
-}
-
-UpdateBetaCpp <- function(success_counts, failure_counts, col_shape_1, col_shape_2) {
-    .Call('_MissingParafac_UpdateBetaCpp', PACKAGE = 'MissingParafac', success_counts, failure_counts, col_shape_1, col_shape_2)
-}
-
-UpdateSufficient <- function(Y, R, C, K) {
-    .Call('_MissingParafac_UpdateSufficient', PACKAGE = 'MissingParafac', Y, R, C, K)
-}
-
-UpdateClassCpp <- function(Y, R, log_beta, log_1_m_beta, log_gamma, log_1_m_gamma, log_omega) {
-    .Call('_MissingParafac_UpdateClassCpp', PACKAGE = 'MissingParafac', Y, R, log_beta, log_1_m_beta, log_gamma, log_1_m_gamma, log_omega)
+    .Call('_NiNBayes_UpdateClassMARCpp', PACKAGE = 'NiNBayes', Y, R, log_beta, log_1_m_beta, log_omega)
 }
 
 rcpp_hello <- function() {
-    .Call('_MissingParafac_rcpp_hello', PACKAGE = 'MissingParafac')
+    .Call('_NiNBayes_rcpp_hello', PACKAGE = 'NiNBayes')
 }
 
 rcpparma_hello_world <- function() {
-    .Call('_MissingParafac_rcpparma_hello_world', PACKAGE = 'MissingParafac')
+    .Call('_NiNBayes_rcpparma_hello_world', PACKAGE = 'NiNBayes')
 }
 
 rcpparma_outerproduct <- function(x) {
-    .Call('_MissingParafac_rcpparma_outerproduct', PACKAGE = 'MissingParafac', x)
+    .Call('_NiNBayes_rcpparma_outerproduct', PACKAGE = 'NiNBayes', x)
 }
 
 rcpparma_innerproduct <- function(x) {
-    .Call('_MissingParafac_rcpparma_innerproduct', PACKAGE = 'MissingParafac', x)
+    .Call('_NiNBayes_rcpparma_innerproduct', PACKAGE = 'NiNBayes', x)
 }
 
 rcpparma_bothproducts <- function(x) {
-    .Call('_MissingParafac_rcpparma_bothproducts', PACKAGE = 'MissingParafac', x)
+    .Call('_NiNBayes_rcpparma_bothproducts', PACKAGE = 'NiNBayes', x)
+}
+
+TLOMI <- function(Y, R, omega, log_omega, gamma, log_gamma, log_1_m_gamma, beta, log_beta, log_1_m_beta, xi, j_0) {
+    .Call('_NiNBayes_TLOMI', PACKAGE = 'NiNBayes', Y, R, omega, log_omega, gamma, log_gamma, log_1_m_gamma, beta, log_beta, log_1_m_beta, xi, j_0)
+}
+
+UpdateBetaCpp <- function(success_counts, failure_counts, col_shape_1, col_shape_2) {
+    .Call('_NiNBayes_UpdateBetaCpp', PACKAGE = 'NiNBayes', success_counts, failure_counts, col_shape_1, col_shape_2)
+}
+
+UpdateSufficient <- function(Y, R, C, K) {
+    .Call('_NiNBayes_UpdateSufficient', PACKAGE = 'NiNBayes', Y, R, C, K)
+}
+
+UpdateClassCpp <- function(Y, R, log_beta, log_1_m_beta, log_gamma, log_1_m_gamma, log_omega) {
+    .Call('_NiNBayes_UpdateClassCpp', PACKAGE = 'NiNBayes', Y, R, log_beta, log_1_m_beta, log_gamma, log_1_m_gamma, log_omega)
 }
 

@@ -21,4 +21,3 @@ An object of type parafacstate, holding the state of the Markov chain.
 \description{
 Initializes the nonignorable Parafac model by sampling from the prior.
 }
-

@@ -34,4 +34,3 @@ Returns an object of type parafac, consisting of the parameters samples from the
 \description{
 Samples from the posterior of the ignorable PARAFAC model by Gibbs sampling
 }
-

@@ -38,4 +38,3 @@ observed data model, and compres to nonparametric intervals. This gives a
 sanity check on the model; if the mode disagrees substantially with the 
 nonparametric fit, this suggests potential lack of fit.
 }
-

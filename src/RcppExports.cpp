@@ -8,7 +8,7 @@ using namespace Rcpp;
 
 // CCMVMI
 arma::umat CCMVMI(const arma::umat& Y, const arma::umat& R, const arma::vec& omega, const arma::vec& log_omega, const arma::mat& gamma, const arma::mat& log_gamma, const arma::mat& log_1_m_gamma, const arma::mat& beta, const arma::mat& log_beta, const arma::mat& log_1_m_beta);
-RcppExport SEXP _MissingParafac_CCMVMI(SEXP YSEXP, SEXP RSEXP, SEXP omegaSEXP, SEXP log_omegaSEXP, SEXP gammaSEXP, SEXP log_gammaSEXP, SEXP log_1_m_gammaSEXP, SEXP betaSEXP, SEXP log_betaSEXP, SEXP log_1_m_betaSEXP) {
+RcppExport SEXP _NiNBayes_CCMVMI(SEXP YSEXP, SEXP RSEXP, SEXP omegaSEXP, SEXP log_omegaSEXP, SEXP gammaSEXP, SEXP log_gammaSEXP, SEXP log_1_m_gammaSEXP, SEXP betaSEXP, SEXP log_betaSEXP, SEXP log_1_m_betaSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -28,7 +28,7 @@ END_RCPP
 }
 // CCMVGcomp
 arma::vec CCMVGcomp(int N_sim, int J, int j_0, const arma::vec& omega, const arma::vec& log_omega, const arma::mat& gamma, const arma::mat& log_gamma, const arma::mat& log_1_m_gamma, const arma::mat& beta, const arma::mat& log_beta, const arma::mat& log_1_m_beta, const double& xi);
-RcppExport SEXP _MissingParafac_CCMVGcomp(SEXP N_simSEXP, SEXP JSEXP, SEXP j_0SEXP, SEXP omegaSEXP, SEXP log_omegaSEXP, SEXP gammaSEXP, SEXP log_gammaSEXP, SEXP log_1_m_gammaSEXP, SEXP betaSEXP, SEXP log_betaSEXP, SEXP log_1_m_betaSEXP, SEXP xiSEXP) {
+RcppExport SEXP _NiNBayes_CCMVGcomp(SEXP N_simSEXP, SEXP JSEXP, SEXP j_0SEXP, SEXP omegaSEXP, SEXP log_omegaSEXP, SEXP gammaSEXP, SEXP log_gammaSEXP, SEXP log_1_m_gammaSEXP, SEXP betaSEXP, SEXP log_betaSEXP, SEXP log_1_m_betaSEXP, SEXP xiSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -50,7 +50,7 @@ END_RCPP
 }
 // MARMI
 arma::umat MARMI(const arma::umat& Y, const arma::umat& R, const arma::vec& omega, const arma::vec& log_omega, const arma::mat& beta, const arma::mat& log_beta, const arma::mat& log_1_m_beta);
-RcppExport SEXP _MissingParafac_MARMI(SEXP YSEXP, SEXP RSEXP, SEXP omegaSEXP, SEXP log_omegaSEXP, SEXP betaSEXP, SEXP log_betaSEXP, SEXP log_1_m_betaSEXP) {
+RcppExport SEXP _NiNBayes_MARMI(SEXP YSEXP, SEXP RSEXP, SEXP omegaSEXP, SEXP log_omegaSEXP, SEXP betaSEXP, SEXP log_betaSEXP, SEXP log_1_m_betaSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -67,7 +67,7 @@ END_RCPP
 }
 // LogSumExp
 double LogSumExp(arma::vec x);
-RcppExport SEXP _MissingParafac_LogSumExp(SEXP xSEXP) {
+RcppExport SEXP _NiNBayes_LogSumExp(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -78,7 +78,7 @@ END_RCPP
 }
 // NIPMI
 arma::mat NIPMI(const arma::mat& Y, const arma::umat& R, const arma::vec& omega, const arma::vec& log_omega, const arma::mat& gamma, const arma::mat& log_gamma, const arma::mat& log_1_m_gamma, const arma::mat& beta, const arma::mat& log_beta, const arma::mat& log_1_m_beta, const int j_0);
-RcppExport SEXP _MissingParafac_NIPMI(SEXP YSEXP, SEXP RSEXP, SEXP omegaSEXP, SEXP log_omegaSEXP, SEXP gammaSEXP, SEXP log_gammaSEXP, SEXP log_1_m_gammaSEXP, SEXP betaSEXP, SEXP log_betaSEXP, SEXP log_1_m_betaSEXP, SEXP j_0SEXP) {
+RcppExport SEXP _NiNBayes_NIPMI(SEXP YSEXP, SEXP RSEXP, SEXP omegaSEXP, SEXP log_omegaSEXP, SEXP gammaSEXP, SEXP log_gammaSEXP, SEXP log_1_m_gammaSEXP, SEXP betaSEXP, SEXP log_betaSEXP, SEXP log_1_m_betaSEXP, SEXP j_0SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -99,7 +99,7 @@ END_RCPP
 }
 // ParafacGcomp
 arma::vec ParafacGcomp(int N_sim, int J, int j_0, const arma::vec& omega, const arma::vec& log_omega, const arma::mat& gamma, const arma::mat& log_gamma, const arma::mat& log_1_m_gamma, const arma::mat& beta, const arma::mat& log_beta, const arma::mat& log_1_m_beta, const double& xi);
-RcppExport SEXP _MissingParafac_ParafacGcomp(SEXP N_simSEXP, SEXP JSEXP, SEXP j_0SEXP, SEXP omegaSEXP, SEXP log_omegaSEXP, SEXP gammaSEXP, SEXP log_gammaSEXP, SEXP log_1_m_gammaSEXP, SEXP betaSEXP, SEXP log_betaSEXP, SEXP log_1_m_betaSEXP, SEXP xiSEXP) {
+RcppExport SEXP _NiNBayes_ParafacGcomp(SEXP N_simSEXP, SEXP JSEXP, SEXP j_0SEXP, SEXP omegaSEXP, SEXP log_omegaSEXP, SEXP gammaSEXP, SEXP log_gammaSEXP, SEXP log_1_m_gammaSEXP, SEXP betaSEXP, SEXP log_betaSEXP, SEXP log_1_m_betaSEXP, SEXP xiSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -121,7 +121,7 @@ END_RCPP
 }
 // UpdateClassMARCpp
 List UpdateClassMARCpp(arma::umat Y, arma::umat R, arma::mat log_beta, arma::mat log_1_m_beta, arma::vec log_omega);
-RcppExport SEXP _MissingParafac_UpdateClassMARCpp(SEXP YSEXP, SEXP RSEXP, SEXP log_betaSEXP, SEXP log_1_m_betaSEXP, SEXP log_omegaSEXP) {
+RcppExport SEXP _NiNBayes_UpdateClassMARCpp(SEXP YSEXP, SEXP RSEXP, SEXP log_betaSEXP, SEXP log_1_m_betaSEXP, SEXP log_omegaSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -134,9 +134,62 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// rcpp_hello
+List rcpp_hello();
+RcppExport SEXP _NiNBayes_rcpp_hello() {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    rcpp_result_gen = Rcpp::wrap(rcpp_hello());
+    return rcpp_result_gen;
+END_RCPP
+}
+// rcpparma_hello_world
+arma::mat rcpparma_hello_world();
+RcppExport SEXP _NiNBayes_rcpparma_hello_world() {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    rcpp_result_gen = Rcpp::wrap(rcpparma_hello_world());
+    return rcpp_result_gen;
+END_RCPP
+}
+// rcpparma_outerproduct
+arma::mat rcpparma_outerproduct(const arma::colvec& x);
+RcppExport SEXP _NiNBayes_rcpparma_outerproduct(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
+    rcpp_result_gen = Rcpp::wrap(rcpparma_outerproduct(x));
+    return rcpp_result_gen;
+END_RCPP
+}
+// rcpparma_innerproduct
+double rcpparma_innerproduct(const arma::colvec& x);
+RcppExport SEXP _NiNBayes_rcpparma_innerproduct(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
+    rcpp_result_gen = Rcpp::wrap(rcpparma_innerproduct(x));
+    return rcpp_result_gen;
+END_RCPP
+}
+// rcpparma_bothproducts
+Rcpp::List rcpparma_bothproducts(const arma::colvec& x);
+RcppExport SEXP _NiNBayes_rcpparma_bothproducts(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
+    rcpp_result_gen = Rcpp::wrap(rcpparma_bothproducts(x));
+    return rcpp_result_gen;
+END_RCPP
+}
 // TLOMI
 arma::mat TLOMI(const arma::mat& Y, const arma::umat& R, const arma::vec& omega, const arma::vec& log_omega, const arma::mat& gamma, const arma::mat& log_gamma, const arma::mat& log_1_m_gamma, const arma::mat& beta, const arma::mat& log_beta, const arma::mat& log_1_m_beta, const double xi, const int j_0);
-RcppExport SEXP _MissingParafac_TLOMI(SEXP YSEXP, SEXP RSEXP, SEXP omegaSEXP, SEXP log_omegaSEXP, SEXP gammaSEXP, SEXP log_gammaSEXP, SEXP log_1_m_gammaSEXP, SEXP betaSEXP, SEXP log_betaSEXP, SEXP log_1_m_betaSEXP, SEXP xiSEXP, SEXP j_0SEXP) {
+RcppExport SEXP _NiNBayes_TLOMI(SEXP YSEXP, SEXP RSEXP, SEXP omegaSEXP, SEXP log_omegaSEXP, SEXP gammaSEXP, SEXP log_gammaSEXP, SEXP log_1_m_gammaSEXP, SEXP betaSEXP, SEXP log_betaSEXP, SEXP log_1_m_betaSEXP, SEXP xiSEXP, SEXP j_0SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -158,7 +211,7 @@ END_RCPP
 }
 // UpdateBetaCpp
 arma::mat UpdateBetaCpp(arma::mat success_counts, arma::mat failure_counts, arma::vec col_shape_1, arma::vec col_shape_2);
-RcppExport SEXP _MissingParafac_UpdateBetaCpp(SEXP success_countsSEXP, SEXP failure_countsSEXP, SEXP col_shape_1SEXP, SEXP col_shape_2SEXP) {
+RcppExport SEXP _NiNBayes_UpdateBetaCpp(SEXP success_countsSEXP, SEXP failure_countsSEXP, SEXP col_shape_1SEXP, SEXP col_shape_2SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -172,7 +225,7 @@ END_RCPP
 }
 // UpdateSufficient
 List UpdateSufficient(arma::umat Y, arma::umat R, arma::uvec C, int K);
-RcppExport SEXP _MissingParafac_UpdateSufficient(SEXP YSEXP, SEXP RSEXP, SEXP CSEXP, SEXP KSEXP) {
+RcppExport SEXP _NiNBayes_UpdateSufficient(SEXP YSEXP, SEXP RSEXP, SEXP CSEXP, SEXP KSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -186,7 +239,7 @@ END_RCPP
 }
 // UpdateClassCpp
 List UpdateClassCpp(arma::umat Y, arma::umat R, arma::mat log_beta, arma::mat log_1_m_beta, arma::mat log_gamma, arma::mat log_1_m_gamma, arma::vec log_omega);
-RcppExport SEXP _MissingParafac_UpdateClassCpp(SEXP YSEXP, SEXP RSEXP, SEXP log_betaSEXP, SEXP log_1_m_betaSEXP, SEXP log_gammaSEXP, SEXP log_1_m_gammaSEXP, SEXP log_omegaSEXP) {
+RcppExport SEXP _NiNBayes_UpdateClassCpp(SEXP YSEXP, SEXP RSEXP, SEXP log_betaSEXP, SEXP log_1_m_betaSEXP, SEXP log_gammaSEXP, SEXP log_1_m_gammaSEXP, SEXP log_omegaSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -201,81 +254,28 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// rcpp_hello
-List rcpp_hello();
-RcppExport SEXP _MissingParafac_rcpp_hello() {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    rcpp_result_gen = Rcpp::wrap(rcpp_hello());
-    return rcpp_result_gen;
-END_RCPP
-}
-// rcpparma_hello_world
-arma::mat rcpparma_hello_world();
-RcppExport SEXP _MissingParafac_rcpparma_hello_world() {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    rcpp_result_gen = Rcpp::wrap(rcpparma_hello_world());
-    return rcpp_result_gen;
-END_RCPP
-}
-// rcpparma_outerproduct
-arma::mat rcpparma_outerproduct(const arma::colvec& x);
-RcppExport SEXP _MissingParafac_rcpparma_outerproduct(SEXP xSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_outerproduct(x));
-    return rcpp_result_gen;
-END_RCPP
-}
-// rcpparma_innerproduct
-double rcpparma_innerproduct(const arma::colvec& x);
-RcppExport SEXP _MissingParafac_rcpparma_innerproduct(SEXP xSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_innerproduct(x));
-    return rcpp_result_gen;
-END_RCPP
-}
-// rcpparma_bothproducts
-Rcpp::List rcpparma_bothproducts(const arma::colvec& x);
-RcppExport SEXP _MissingParafac_rcpparma_bothproducts(SEXP xSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_bothproducts(x));
-    return rcpp_result_gen;
-END_RCPP
-}
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_MissingParafac_CCMVMI", (DL_FUNC) &_MissingParafac_CCMVMI, 10},
-    {"_MissingParafac_CCMVGcomp", (DL_FUNC) &_MissingParafac_CCMVGcomp, 12},
-    {"_MissingParafac_MARMI", (DL_FUNC) &_MissingParafac_MARMI, 7},
-    {"_MissingParafac_LogSumExp", (DL_FUNC) &_MissingParafac_LogSumExp, 1},
-    {"_MissingParafac_NIPMI", (DL_FUNC) &_MissingParafac_NIPMI, 11},
-    {"_MissingParafac_ParafacGcomp", (DL_FUNC) &_MissingParafac_ParafacGcomp, 12},
-    {"_MissingParafac_UpdateClassMARCpp", (DL_FUNC) &_MissingParafac_UpdateClassMARCpp, 5},
-    {"_MissingParafac_TLOMI", (DL_FUNC) &_MissingParafac_TLOMI, 12},
-    {"_MissingParafac_UpdateBetaCpp", (DL_FUNC) &_MissingParafac_UpdateBetaCpp, 4},
-    {"_MissingParafac_UpdateSufficient", (DL_FUNC) &_MissingParafac_UpdateSufficient, 4},
-    {"_MissingParafac_UpdateClassCpp", (DL_FUNC) &_MissingParafac_UpdateClassCpp, 7},
-    {"_MissingParafac_rcpp_hello", (DL_FUNC) &_MissingParafac_rcpp_hello, 0},
-    {"_MissingParafac_rcpparma_hello_world", (DL_FUNC) &_MissingParafac_rcpparma_hello_world, 0},
-    {"_MissingParafac_rcpparma_outerproduct", (DL_FUNC) &_MissingParafac_rcpparma_outerproduct, 1},
-    {"_MissingParafac_rcpparma_innerproduct", (DL_FUNC) &_MissingParafac_rcpparma_innerproduct, 1},
-    {"_MissingParafac_rcpparma_bothproducts", (DL_FUNC) &_MissingParafac_rcpparma_bothproducts, 1},
+    {"_NiNBayes_CCMVMI", (DL_FUNC) &_NiNBayes_CCMVMI, 10},
+    {"_NiNBayes_CCMVGcomp", (DL_FUNC) &_NiNBayes_CCMVGcomp, 12},
+    {"_NiNBayes_MARMI", (DL_FUNC) &_NiNBayes_MARMI, 7},
+    {"_NiNBayes_LogSumExp", (DL_FUNC) &_NiNBayes_LogSumExp, 1},
+    {"_NiNBayes_NIPMI", (DL_FUNC) &_NiNBayes_NIPMI, 11},
+    {"_NiNBayes_ParafacGcomp", (DL_FUNC) &_NiNBayes_ParafacGcomp, 12},
+    {"_NiNBayes_UpdateClassMARCpp", (DL_FUNC) &_NiNBayes_UpdateClassMARCpp, 5},
+    {"_NiNBayes_rcpp_hello", (DL_FUNC) &_NiNBayes_rcpp_hello, 0},
+    {"_NiNBayes_rcpparma_hello_world", (DL_FUNC) &_NiNBayes_rcpparma_hello_world, 0},
+    {"_NiNBayes_rcpparma_outerproduct", (DL_FUNC) &_NiNBayes_rcpparma_outerproduct, 1},
+    {"_NiNBayes_rcpparma_innerproduct", (DL_FUNC) &_NiNBayes_rcpparma_innerproduct, 1},
+    {"_NiNBayes_rcpparma_bothproducts", (DL_FUNC) &_NiNBayes_rcpparma_bothproducts, 1},
+    {"_NiNBayes_TLOMI", (DL_FUNC) &_NiNBayes_TLOMI, 12},
+    {"_NiNBayes_UpdateBetaCpp", (DL_FUNC) &_NiNBayes_UpdateBetaCpp, 4},
+    {"_NiNBayes_UpdateSufficient", (DL_FUNC) &_NiNBayes_UpdateSufficient, 4},
+    {"_NiNBayes_UpdateClassCpp", (DL_FUNC) &_NiNBayes_UpdateClassCpp, 7},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_MissingParafac(DllInfo *dll) {
+RcppExport void R_init_NiNBayes(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }
