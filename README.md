@@ -4,7 +4,9 @@ NiNBayes
 About
 -----
 
-The purpose of this package is to implemetn *N*on-*i*gnorable *N*onparametric *Bayes* estimation procedures. Emphasis is given to conducting methods which allow the user to conduct a sensitivity analysis by using different assumptions. We allow for both fully-Bayes estimation of aspects of the full-data distribution and (more usefully?) multiple imputation of data under different assumptions about the missing data.
+The purpose of this package is to implement *N*on-*i*gnorable *N*onparametric *Bayes* estimation procedures. Emphasis is given to conducting methods which allow the user to conduct a sensitivity analysis by using different assumptions. We allow for both fully-Bayes estimation of aspects of the full-data distribution and (more usefully?) multiple imputation of data under different assumptions about the missing data.
+
+For relevant details about what this package is trying to accomplish, see [Linero and Daniels (2017)](https://ani.stat.fsu.edu/~arlinero/assets/documents/GeneralBNPApproach.pdf).
 
 Installation
 ------------
@@ -19,7 +21,7 @@ Using the package
 
 This package is currently in a very preliminary status. Right now, the package allows for analyzing simple multivariate binary data, though there are plans in the future to (1) allow for the inclusion of covariates and (2) allow for continuous responses.
 
-We illustrate on the following simple example, where missingness is MCAR. First, we make fake data using the `bindata` backage.
+We illustrate on the following simple example, where missingness is MCAR. First, we make fake data using the `bindata` package.
 
 ``` r
 library(bindata)
@@ -56,7 +58,7 @@ imputes_mar <- ParafacMI(Y = fake_data$Y, R = fake_data$R, chain = fit_mar,
                          num_impute = 20, method= "MAR")
 ```
 
-The obejcts produced above are lists with `num_impute` components consisting of a completed dataset `Y`. For example
+The objects produced above are lists with `num_impute` components consisting of a completed dataset `Y`. For example
 
 ``` r
 head(imputes_ccmv[[1]])
@@ -103,4 +105,13 @@ This is also more flexible, in that users can apply different analysis models to
 ``` r
 mu_ccmv <- GcompCCMV(fit_mnar)
 mu_nip <- GcompODMV(fit_mnar, j_0 = 6)
+```
+
+### Sensitivity parameters
+
+In the current version of this package, there is only one imputatin method which allows incorporation of sensitivity parameters: the Tilted Last Occasion assumption. See Linero and Daniels (2017) for more details. This requires providing, in addition to the marginal we want to impute, a sensitivity parameter *ξ* to be used in exponential tilting.
+
+``` r
+imputes_tlo <- ParafacMI(Y = fake_data$Y, R = fake_data$R, chain = fit_mnar, 
+                         num_impute = 20, method = "TLO", j_0 = 6, xi = rep(0, 20))
 ```

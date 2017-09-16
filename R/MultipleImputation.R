@@ -27,7 +27,7 @@ ParafacMI <- function(Y, R, chain, num_impute = 20, method = "CCMV", j_0 = NULL,
     } else if(method == "NIP") {
       out[[n]] <- NIPMI(Y, R, omega, log_omega, gamma, log_gamma, log_1_m_gamma, beta, log_beta, log_1_m_beta, j_0)
     } else if(method == "TLO") {
-      out[[n]] <- TLOMI(Y, R, omega, log_omega, gamma, log_gamma, log_1_m_gamma, beta, log_beta, log_1_m_beta, xi, j_0)
+      out[[n]] <- TLOMI(Y, R, omega, log_omega, gamma, log_gamma, log_1_m_gamma, beta, log_beta, log_1_m_beta, xi[n], j_0)
     } else {
       out[[n]] <- MARMI(Y = Y, R = R, omega = omega, log_omega = log_omega, beta = beta, log_beta = log_beta, log_1_m_beta = log_1_m_beta)
     }
