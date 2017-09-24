@@ -15,6 +15,20 @@ For relevant details about what this package is trying to accomplish, see [Liner
 
 ## Installation
 
+If nessecary, first install the dependencies
+
+```{r, eval = FALSE}
+install.packages(c("MCMCpack", "tidyverse", "gridExtra", "Rcpp", "RcppArmadillo"))
+```
+
+The package is installed using the `devtools` package, which should also be installed. 
+
+```{r, eval = FALSE}
+install.packages("devtools")
+```
+
+The following command installs the packages, and should work on OSX, Windows, and Linux.
+
 ```{r, eval = FALSE}
 library(devtools)
 install_github("theodds/NiNBayes")

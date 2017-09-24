@@ -11,6 +11,20 @@ For relevant details about what this package is trying to accomplish, see [Liner
 Installation
 ------------
 
+If nessecary, first install the dependencies
+
+``` r
+install.packages(c("MCMCpack", "tidyverse", "gridExtra", "Rcpp", "RcppArmadillo"))
+```
+
+The package is installed using the `devtools` package, which should also be installed.
+
+``` r
+install.packages("devtools")
+```
+
+The following command installs the packages, and should work on OSX, Windows, and Linux.
+
 ``` r
 library(devtools)
 install_github("theodds/NiNBayes")
@@ -109,7 +123,7 @@ mu_nip <- GcompODMV(fit_mnar, j_0 = 6)
 
 ### Sensitivity parameters
 
-In the current version of this package, there is only one imputatin method which allows incorporation of sensitivity parameters: the Tilted Last Occasion assumption. See Linero and Daniels (2017) for more details. This requires providing, in addition to the marginal we want to impute, a sensitivity parameter *ξ* to be used in exponential tilting for each imputed dataset. For example, if *ξ* ∼ Uniform(0,1) we might do the following:
+In the current version of this package, there is only one imputation method which allows incorporation of sensitivity parameters: the Tilted Last Occasion assumption. See Linero and Daniels (2017) for more details. This requires providing, in addition to the marginal we want to impute, a sensitivity parameter *ξ* to be used in exponential tilting for each imputed dataset. For example, if *ξ* ∼ Uniform(0,1) we might do the following:
 
 ``` r
 imputes_tlo <- ParafacMI(Y = fake_data$Y, R = fake_data$R, chain = fit_mnar, 
