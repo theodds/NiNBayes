@@ -135,9 +135,7 @@ imputes_tlo <- ParafacMI(Y = fake_data$Y, R = fake_data$R, chain = fit_mnar,
 There is currently not much to speak of in the way of model diagnostics, but one sanity check is to check that inferences on *identified* parameters can be reproduced by the model. The simplest thing to look at is the marginal means of *R*<sub>*j*</sub> and of (*Y*<sub>*j*</sub>|*R*<sub>*j*</sub> = 1). The convenience function `ParafacObserved` computes these:
 
 ``` r
-marginal_means <- ParafacObserved(fit_mnar, fake_data$Y, fake_data$Y, do_plot = TRUE)
+marginal_means <- ParafacObserved(fit_mnar, fake_data$Y, fake_data$R, do_plot = TRUE)
 ```
-
-    ## Warning: Removed 6 rows containing missing values (geom_errorbar).
 
 ![](README_files/figure-markdown_github/unnamed-chunk-11-1.png)

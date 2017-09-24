@@ -74,7 +74,7 @@ ParafacObserved <- function(chain, Y, R, do_plot = TRUE) {
     p <- p + theme_bw()
     
     p_2 <- ggplot()
-    p_2 <- p_2 + geom_line(aes(x = time_points, y = R_obs, color = 'darkorange1'))
+    p_2 <- p_2 + geom_line(aes(x = time_points, y = R_obs), color = 'darkorange1')
     p_2 <- p_2 + geom_point(aes(x = time_points, y = R_posterior_mean))
     p_2 <- p_2 + geom_errorbar(aes(x = time_points, ymax = R_ucl, ymin = R_lcl), width = .3)
     p_2 <- p_2 + geom_errorbar(aes(x = time_points + .3, ymax = R_obs_ucl, ymin = R_obs_lcl), width = .15, color = 'darkorange1')
