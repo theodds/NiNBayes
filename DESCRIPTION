@@ -1,17 +1,14 @@
 Package: NiNBayes
 Type: Package
-Title: What the package does (short line)
-Version: 1.0
+Title: Packing for fitting nonignorable nonparametric Bayes models
+Version: 0.1
 Date: 2017-07-16
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Antonio R. Linero
+Maintainer: Antonio R. Linero <arlinero@stat.fsu.edu>
+Description: At the moment, this package fits the infinite product-mixture multinomial model described by Linero and Daniels (2017, to appear in Statistical Science) to missing data problems. The package allows for multiple imputation under a number of different identifying restrictions, as well as computation of intention-to-treat effects by Monte Carlo integration. 
+License: GPL v2.0
 Imports:
     Rcpp (>= 0.12.11)
 LinkingTo: Rcpp, RcppArmadillo
-Depends:
-    MCMCpack,
-    tidyverse, 
-    gridExtra
+Depends: MCMCpack, tidyverse, gridExtra
 RoxygenNote: 6.0.1
