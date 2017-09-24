@@ -17,7 +17,7 @@ If nessecary, first install the dependencies
 install.packages(c("MCMCpack", "tidyverse", "gridExtra", "Rcpp", "RcppArmadillo", "mitools", "bindata"))
 ```
 
-The package is installed using the `devtools` package, which should also be installed. In order to use `devtools`, Windows users should have the `Rtools` toolchain installed; if further help is needed, see \[www.rstudio.com/products/rpackages/devtools/\].
+The package is installed using the `devtools` package, which should also be installed. In order to use `devtools`, Windows users should have the `Rtools` toolchain installed; if further help is needed, [www.rstudio.com/products/rpackages/devtools/](see here).
 
 ``` r
 install.packages("devtools")
