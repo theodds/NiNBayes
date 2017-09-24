@@ -8,7 +8,7 @@
 #' @param chain an object of type parafac, obtained from fitting the nonignorable parafac model
 #' @param Y binary NxJ matrix of observed responses.
 #' @param R binary NxJ matrix of missingness indicators
-#' @param do_plot boolean; if true, creates a diagnostic plot checking that the prior reproduces nonparametric inference on the identified marginal parameters
+#' @param do_plot boolean; if true, creates a diagnostic plot checking that the prior reproduces nonparametric inference on the identified marginal parameters. The dark error bars give 95% credible intervals for the parameters, while orange bars give 95% nonparametric confidence intervals. 
 #' 
 #' @return Returns a list consisting of
 #' \itemize{
@@ -67,7 +67,7 @@ ParafacObserved <- function(chain, Y, R, do_plot = TRUE) {
     time_points <- 1:ncol(Y)
     
     p <- ggplot()
-    p <- p + geom_line(aes(x = time_points, y = Y_obs, color = 'darkorange1'))
+    p <- p + geom_line(aes(x = time_points, y = Y_obs), color = 'darkorange1')
     p <- p + geom_point(aes(x = time_points, y = Y_posterior_mean))
     p <- p + geom_errorbar(aes(x = time_points, ymax = Y_ucl, ymin = Y_lcl), width = .3)
     p <- p + geom_errorbar(aes(x = time_points + .3, ymax = Y_obs_ucl, ymin = Y_obs_lcl), width = .15, color = 'darkorange1')

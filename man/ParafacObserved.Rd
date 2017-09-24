@@ -13,7 +13,7 @@ ParafacObserved(chain, Y, R, do_plot = TRUE)
 
 \item{R}{binary NxJ matrix of missingness indicators}
 
-\item{do_plot}{boolean; if true, creates a diagnostic plot checking that the prior reproduces nonparametric inference on the identified marginal parameters}
+\item{do_plot}{boolean; if true, creates a diagnostic plot checking that the prior reproduces nonparametric inference on the identified marginal parameters. The dark error bars give 95% credible intervals for the parameters, while orange bars give 95% nonparametric confidence intervals.}
 }
 \value{
 Returns a list consisting of

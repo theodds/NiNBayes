@@ -99,3 +99,10 @@ In the current version of this package, there is only one imputation method whic
 imputes_tlo <- ParafacMI(Y = fake_data$Y, R = fake_data$R, chain = fit_mnar, 
                          num_impute = 20, method = "TLO", j_0 = 6, xi = runif(20))
 ```
+
+### Sanity checks for model fit
+
+There is currently not much to speak of in the way of model diagnostics, but one sanity check is to check that inferences on *identified* parameters can be reproduced by the model. The simplest thing to look at is the marginal means of $R_j$ and of $(Y_j | R_j = 1)$. The convenience function `ParafacObserved` computes these:
+```{r}
+marginal_means <- ParafacObserved(fit_mnar, fake_data$Y, fake_data$Y, do_plot = TRUE)
+```

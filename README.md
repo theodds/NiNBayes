@@ -17,7 +17,7 @@ If nessecary, first install the dependencies
 install.packages(c("MCMCpack", "tidyverse", "gridExtra", "Rcpp", "RcppArmadillo", "mitools", "bindata"))
 ```
 
-The package is installed using the `devtools` package, which should also be installed. In order to use `devtools`, Windows users should have the `Rtools` toolchain installed, while OSX users may need to install Xcode from the app store; if further help is needed, [see here](http://www.rstudio.com/products/rpackages/devtools/).
+The package is installed using the `devtools` package, which should also be installed. In order to use `devtools`, Windows users should have the `Rtools` toolchain installed, while OSX users may need to install Xcode from the app store; if further help is needed, [see here](https://www.rstudio.com/products/rpackages/devtools/).
 
 ``` r
 install.packages("devtools")
@@ -129,3 +129,15 @@ In the current version of this package, there is only one imputation method whic
 imputes_tlo <- ParafacMI(Y = fake_data$Y, R = fake_data$R, chain = fit_mnar, 
                          num_impute = 20, method = "TLO", j_0 = 6, xi = runif(20))
 ```
+
+### Sanity checks for model fit
+
+There is currently not much to speak of in the way of model diagnostics, but one sanity check is to check that inferences on *identified* parameters can be reproduced by the model. The simplest thing to look at is the marginal means of *R*<sub>*j*</sub> and of (*Y*<sub>*j*</sub>|*R*<sub>*j*</sub> = 1). The convenience function `ParafacObserved` computes these:
+
+``` r
+marginal_means <- ParafacObserved(fit_mnar, fake_data$Y, fake_data$Y, do_plot = TRUE)
+```
+
+    ## Warning: Removed 6 rows containing missing values (geom_errorbar).
+
+![](README_files/figure-markdown_github/unnamed-chunk-11-1.png)
