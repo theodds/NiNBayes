@@ -80,7 +80,7 @@ mu_nip <- GcompODMV(fit_mnar, j_0 = 6)
 
 ### Sensitivity parameters
 
-In the current version of this package, there is only one imputatin method which allows incorporation of sensitivity parameters: the Tilted Last Occasion assumption. See Linero and Daniels (2017) for more details. This requires providing, in addition to the marginal we want to impute, a sensitivity parameter $\xi$ to be used in exponential tilting for each imputed dataset. For example, if $\xi \sim \operatorname{Uniform(0,1)}$ we might do the following: 
+In the current version of this package, there is only one imputation method which allows incorporation of sensitivity parameters: the Tilted Last Occasion assumption. See Linero and Daniels (2017) for more details. This requires providing, in addition to the marginal we want to impute, a sensitivity parameter $\xi$ to be used in exponential tilting for each imputed dataset. For example, if $\xi \sim \operatorname{Uniform(0,1)}$ we might do the following: 
 ```{r}
 imputes_tlo <- ParafacMI(Y = fake_data$Y, R = fake_data$R, chain = fit_mnar, 
                          num_impute = 20, method = "TLO", j_0 = 6, xi = runif(20))
