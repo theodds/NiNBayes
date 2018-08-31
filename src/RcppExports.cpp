@@ -134,59 +134,6 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// rcpp_hello
-List rcpp_hello();
-RcppExport SEXP _NiNBayes_rcpp_hello() {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    rcpp_result_gen = Rcpp::wrap(rcpp_hello());
-    return rcpp_result_gen;
-END_RCPP
-}
-// rcpparma_hello_world
-arma::mat rcpparma_hello_world();
-RcppExport SEXP _NiNBayes_rcpparma_hello_world() {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    rcpp_result_gen = Rcpp::wrap(rcpparma_hello_world());
-    return rcpp_result_gen;
-END_RCPP
-}
-// rcpparma_outerproduct
-arma::mat rcpparma_outerproduct(const arma::colvec& x);
-RcppExport SEXP _NiNBayes_rcpparma_outerproduct(SEXP xSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_outerproduct(x));
-    return rcpp_result_gen;
-END_RCPP
-}
-// rcpparma_innerproduct
-double rcpparma_innerproduct(const arma::colvec& x);
-RcppExport SEXP _NiNBayes_rcpparma_innerproduct(SEXP xSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_innerproduct(x));
-    return rcpp_result_gen;
-END_RCPP
-}
-// rcpparma_bothproducts
-Rcpp::List rcpparma_bothproducts(const arma::colvec& x);
-RcppExport SEXP _NiNBayes_rcpparma_bothproducts(SEXP xSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_bothproducts(x));
-    return rcpp_result_gen;
-END_RCPP
-}
 // TLOMI
 arma::mat TLOMI(const arma::mat& Y, const arma::umat& R, const arma::vec& omega, const arma::vec& log_omega, const arma::mat& gamma, const arma::mat& log_gamma, const arma::mat& log_1_m_gamma, const arma::mat& beta, const arma::mat& log_beta, const arma::mat& log_1_m_beta, const double xi, const int j_0);
 RcppExport SEXP _NiNBayes_TLOMI(SEXP YSEXP, SEXP RSEXP, SEXP omegaSEXP, SEXP log_omegaSEXP, SEXP gammaSEXP, SEXP log_gammaSEXP, SEXP log_1_m_gammaSEXP, SEXP betaSEXP, SEXP log_betaSEXP, SEXP log_1_m_betaSEXP, SEXP xiSEXP, SEXP j_0SEXP) {
@@ -254,6 +201,61 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// rcpp_hello
+List rcpp_hello();
+RcppExport SEXP _NiNBayes_rcpp_hello() {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    rcpp_result_gen = Rcpp::wrap(rcpp_hello());
+    return rcpp_result_gen;
+END_RCPP
+}
+// rcpparma_hello_world
+arma::mat rcpparma_hello_world();
+RcppExport SEXP _NiNBayes_rcpparma_hello_world() {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    rcpp_result_gen = Rcpp::wrap(rcpparma_hello_world());
+    return rcpp_result_gen;
+END_RCPP
+}
+// rcpparma_outerproduct
+arma::mat rcpparma_outerproduct(const arma::colvec& x);
+RcppExport SEXP _NiNBayes_rcpparma_outerproduct(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
+    rcpp_result_gen = Rcpp::wrap(rcpparma_outerproduct(x));
+    return rcpp_result_gen;
+END_RCPP
+}
+// rcpparma_innerproduct
+double rcpparma_innerproduct(const arma::colvec& x);
+RcppExport SEXP _NiNBayes_rcpparma_innerproduct(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
+    rcpp_result_gen = Rcpp::wrap(rcpparma_innerproduct(x));
+    return rcpp_result_gen;
+END_RCPP
+}
+// rcpparma_bothproducts
+Rcpp::List rcpparma_bothproducts(const arma::colvec& x);
+RcppExport SEXP _NiNBayes_rcpparma_bothproducts(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
+    rcpp_result_gen = Rcpp::wrap(rcpparma_bothproducts(x));
+    return rcpp_result_gen;
+END_RCPP
+}
+
+RcppExport SEXP noshare_impute(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP);
 
 static const R_CallMethodDef CallEntries[] = {
     {"_NiNBayes_CCMVMI", (DL_FUNC) &_NiNBayes_CCMVMI, 10},
@@ -263,15 +265,16 @@ static const R_CallMethodDef CallEntries[] = {
     {"_NiNBayes_NIPMI", (DL_FUNC) &_NiNBayes_NIPMI, 11},
     {"_NiNBayes_ParafacGcomp", (DL_FUNC) &_NiNBayes_ParafacGcomp, 12},
     {"_NiNBayes_UpdateClassMARCpp", (DL_FUNC) &_NiNBayes_UpdateClassMARCpp, 5},
+    {"_NiNBayes_TLOMI", (DL_FUNC) &_NiNBayes_TLOMI, 12},
+    {"_NiNBayes_UpdateBetaCpp", (DL_FUNC) &_NiNBayes_UpdateBetaCpp, 4},
+    {"_NiNBayes_UpdateSufficient", (DL_FUNC) &_NiNBayes_UpdateSufficient, 4},
+    {"_NiNBayes_UpdateClassCpp", (DL_FUNC) &_NiNBayes_UpdateClassCpp, 7},
     {"_NiNBayes_rcpp_hello", (DL_FUNC) &_NiNBayes_rcpp_hello, 0},
     {"_NiNBayes_rcpparma_hello_world", (DL_FUNC) &_NiNBayes_rcpparma_hello_world, 0},
     {"_NiNBayes_rcpparma_outerproduct", (DL_FUNC) &_NiNBayes_rcpparma_outerproduct, 1},
     {"_NiNBayes_rcpparma_innerproduct", (DL_FUNC) &_NiNBayes_rcpparma_innerproduct, 1},
     {"_NiNBayes_rcpparma_bothproducts", (DL_FUNC) &_NiNBayes_rcpparma_bothproducts, 1},
-    {"_NiNBayes_TLOMI", (DL_FUNC) &_NiNBayes_TLOMI, 12},
-    {"_NiNBayes_UpdateBetaCpp", (DL_FUNC) &_NiNBayes_UpdateBetaCpp, 4},
-    {"_NiNBayes_UpdateSufficient", (DL_FUNC) &_NiNBayes_UpdateSufficient, 4},
-    {"_NiNBayes_UpdateClassCpp", (DL_FUNC) &_NiNBayes_UpdateClassCpp, 7},
+    {"noshare_impute",                  (DL_FUNC) &noshare_impute,                  11},
     {NULL, NULL, 0}
 };
 

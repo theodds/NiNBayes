@@ -3,6 +3,7 @@
 *.Rhistory
 *.Rbuildignore
 Scratch.R
+schizo.rds
 
 # Prerequisites
 *.d

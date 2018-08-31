@@ -29,6 +29,22 @@ UpdateClassMARCpp <- function(Y, R, log_beta, log_1_m_beta, log_omega) {
     .Call('_NiNBayes_UpdateClassMARCpp', PACKAGE = 'NiNBayes', Y, R, log_beta, log_1_m_beta, log_omega)
 }
 
+TLOMI <- function(Y, R, omega, log_omega, gamma, log_gamma, log_1_m_gamma, beta, log_beta, log_1_m_beta, xi, j_0) {
+    .Call('_NiNBayes_TLOMI', PACKAGE = 'NiNBayes', Y, R, omega, log_omega, gamma, log_gamma, log_1_m_gamma, beta, log_beta, log_1_m_beta, xi, j_0)
+}
+
+UpdateBetaCpp <- function(success_counts, failure_counts, col_shape_1, col_shape_2) {
+    .Call('_NiNBayes_UpdateBetaCpp', PACKAGE = 'NiNBayes', success_counts, failure_counts, col_shape_1, col_shape_2)
+}
+
+UpdateSufficient <- function(Y, R, C, K) {
+    .Call('_NiNBayes_UpdateSufficient', PACKAGE = 'NiNBayes', Y, R, C, K)
+}
+
+UpdateClassCpp <- function(Y, R, log_beta, log_1_m_beta, log_gamma, log_1_m_gamma, log_omega) {
+    .Call('_NiNBayes_UpdateClassCpp', PACKAGE = 'NiNBayes', Y, R, log_beta, log_1_m_beta, log_gamma, log_1_m_gamma, log_omega)
+}
+
 rcpp_hello <- function() {
     .Call('_NiNBayes_rcpp_hello', PACKAGE = 'NiNBayes')
 }
@@ -47,21 +63,5 @@ rcpparma_innerproduct <- function(x) {
 
 rcpparma_bothproducts <- function(x) {
     .Call('_NiNBayes_rcpparma_bothproducts', PACKAGE = 'NiNBayes', x)
-}
-
-TLOMI <- function(Y, R, omega, log_omega, gamma, log_gamma, log_1_m_gamma, beta, log_beta, log_1_m_beta, xi, j_0) {
-    .Call('_NiNBayes_TLOMI', PACKAGE = 'NiNBayes', Y, R, omega, log_omega, gamma, log_gamma, log_1_m_gamma, beta, log_beta, log_1_m_beta, xi, j_0)
-}
-
-UpdateBetaCpp <- function(success_counts, failure_counts, col_shape_1, col_shape_2) {
-    .Call('_NiNBayes_UpdateBetaCpp', PACKAGE = 'NiNBayes', success_counts, failure_counts, col_shape_1, col_shape_2)
-}
-
-UpdateSufficient <- function(Y, R, C, K) {
-    .Call('_NiNBayes_UpdateSufficient', PACKAGE = 'NiNBayes', Y, R, C, K)
-}
-
-UpdateClassCpp <- function(Y, R, log_beta, log_1_m_beta, log_gamma, log_1_m_gamma, log_omega) {
-    .Call('_NiNBayes_UpdateClassCpp', PACKAGE = 'NiNBayes', Y, R, log_beta, log_1_m_beta, log_gamma, log_1_m_gamma, log_omega)
 }
 
