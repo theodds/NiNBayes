@@ -10,5 +10,5 @@ License: GPL v2.0
 Imports:
     Rcpp (>= 0.12.11)
 LinkingTo: Rcpp, RcppArmadillo
-Depends: MCMCpack, tidyverse, gridExtra
+Depends: MCMCpack, tidyverse, gridExtra, rjags
 RoxygenNote: 6.0.1
